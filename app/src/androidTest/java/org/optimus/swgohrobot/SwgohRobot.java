@@ -1,4 +1,4 @@
-package com.greenspector.sample.UIautomator;
+package org.optimus.swgohrobot;
 
 import android.content.Context;
 import android.content.Intent;
@@ -18,9 +18,6 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
-import com.greenspector.probe.android.interfaces.Api;
-
-
 import junit.framework.Assert;
 
 import static org.hamcrest.CoreMatchers.notNullValue;
@@ -31,7 +28,7 @@ import static org.junit.Assert.assertThat;
  */
 @RunWith(AndroidJUnit4.class)
 @SdkSuppress(minSdkVersion = 20)
-public class GreenspectorUIAutomator {
+public class SwgohRobot {
 
     // Package to measure
     private static final String BASIC_SAMPLE_PACKAGE = "com.ea.game.starwarscapital_row";
