@@ -67,7 +67,7 @@ public class SwgohRobot {
 
         waitms(30000);
 
-        mDevice.click((int)(1776*0.4),(int)(1080*0.25));
+        mDevice.click((int) (X_MAX_PIX * 0.4), (int) (Y_MAX_PIX * 0.25));
     }
 
     @Test
@@ -78,9 +78,17 @@ public class SwgohRobot {
         }
     }
 
+    @Test
+    public void testSoccer() {
+        while (true) {
+            waitms(600);
+            mDevice.click(1080 / 2, 1776  - 80);
+        }
+    }
+
     @NonNull
     private UiObject2 getAndWaitByResource(String resourceName) {
-        BySelector searchSelector= By.res(resourceName);
+        BySelector searchSelector = By.res(resourceName);
         mDevice.wait(Until.hasObject(searchSelector), LAUNCH_TIMEOUT);
         UiObject2 searchChrome = mDevice.findObject(searchSelector);
         Assert.assertNotNull(searchChrome);
@@ -88,7 +96,7 @@ public class SwgohRobot {
     }
 
     private UiObject2 getAndWaitByText(String resourceName) {
-        BySelector searchSelector= By.textContains(resourceName);
+        BySelector searchSelector = By.textContains(resourceName);
         mDevice.wait(Until.hasObject(searchSelector), LAUNCH_TIMEOUT);
         UiObject2 searchChrome = mDevice.findObject(searchSelector);
         Assert.assertNotNull(searchChrome);
